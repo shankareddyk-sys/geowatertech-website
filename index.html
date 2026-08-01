@@ -25,7 +25,7 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Top Bar -->
+    <!-- Top Contact Bar -->
     <div class="bg-secondary text-slate-300 text-sm py-2">
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex items-center space-x-6">
@@ -39,7 +39,7 @@
         </div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur shadow-sm">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-secondary flex items-center gap-2">
@@ -49,6 +49,7 @@
             <div class="hidden md:flex space-x-8 font-medium text-slate-700">
                 <a href="#about" class="hover:text-primary transition">About Us</a>
                 <a href="#services" class="hover:text-primary transition">Services</a>
+                <a href="#projects" class="hover:text-primary transition">Live Operations</a>
                 <a href="#process" class="hover:text-primary transition">Our Process</a>
                 <a href="#sectors" class="hover:text-primary transition">Sectors</a>
                 <a href="#contact" class="hover:text-primary transition">Contact</a>
@@ -59,8 +60,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section with Background Image -->
-    <header class="relative bg-cover bg-center text-white py-24 md:py-32" style="background-image: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=1600&auto=format&fit=crop');">
+    <!-- Hero Section with Authentic Sunset Drilling Rig Background -->
+    <header class="relative bg-cover bg-center text-white py-24 md:py-32" style="background-image: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.75)), url('assets/rig-sunset.jpg');">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
             <div>
                 <span class="inline-block bg-primary/20 text-sky-300 border border-sky-400/30 font-semibold text-xs uppercase px-3 py-1 rounded-full mb-4">
@@ -81,11 +82,15 @@
                     </a>
                 </div>
             </div>
-            <div class="bg-slate-900/85 backdrop-blur p-8 rounded-2xl border border-slate-700 shadow-2xl">
+
+            <!-- Fixed Netlify Form (Submits cleanly without 404) -->
+            <div class="bg-slate-900/90 backdrop-blur p-8 rounded-2xl border border-slate-700 shadow-2xl">
                 <h3 class="text-xl font-bold text-white mb-4">Quick Water Solution Inquiry</h3>
-                <!-- Netlify Form Integration -->
-                <form name="water-inquiry" method="POST" data-netlify="true" id="quote" class="space-y-4">
+                <form name="water-inquiry" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" id="quote" class="space-y-4">
                     <input type="hidden" name="form-name" value="water-inquiry" />
+                    <p class="hidden">
+                        <label>Spam protection: <input name="bot-field" /></label>
+                    </p>
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
                         <input type="text" name="name" class="w-full bg-slate-950 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary" placeholder="e.g. Chileshe Mulenga" required>
@@ -119,8 +124,8 @@
         </div>
     </header>
 
-    <!-- Stats Bar with Water Pattern Background -->
-    <section class="relative bg-cover bg-center text-white py-12" style="background-image: linear-gradient(rgba(2, 132, 199, 0.9), rgba(3, 105, 161, 0.9)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop');">
+    <!-- Stats Bar -->
+    <section class="bg-primary text-white py-12">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
                 <p class="text-3xl md:text-4xl font-extrabold mb-1">30+</p>
@@ -141,7 +146,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section with High-Yield Dust Drilling Image -->
     <section id="about" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -156,21 +161,52 @@
                     <div class="flex items-start gap-3">
                         <i class="fa-solid fa-circle-check text-primary text-xl mt-1"></i>
                         <div>
-                            <h4 class="font-bold text-secondary">Advanced Rigs</h4>
-                            <p class="text-xs text-slate-500">Capable of deep-water high-spec drilling.</p>
+                            <h4 class="font-bold text-secondary">Advanced Heavy Rigs</h4>
+                            <p class="text-xs text-slate-500">Capable of deep-water high-spec bedrock drilling.</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-3">
                         <i class="fa-solid fa-circle-check text-primary text-xl mt-1"></i>
                         <div>
-                            <h4 class="font-bold text-secondary">Eco-Friendly</h4>
+                            <h4 class="font-bold text-secondary">Eco-Friendly Systems</h4>
                             <p class="text-xs text-slate-500">Solar-powered sustainable pumping solutions.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="relative">
-                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop" alt="Water Engineering" class="rounded-2xl shadow-xl object-cover w-full h-[400px]">
+                <img src="assets/rig-drilling-dust.jpg" alt="GeoWater Tech Drilling Rig Operating in Zambia" class="rounded-2xl shadow-xl object-cover w-full h-[450px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Drilling Action & Project Showcase -->
+    <section id="projects" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold mb-4">Our Field Operations & Water Projects</h2>
+                <p class="text-slate-400">Authentic operational photos and field footage from our borehole drilling sites across Zambia.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                <!-- Embedded Live Drilling Video -->
+                <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 shadow-xl">
+                    <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-video text-primary"></i> Live Drilling Mud & Water Discharge
+                    </h3>
+                    <video autoplay loop muted playsinline class="w-full rounded-xl h-[400px] object-cover">
+                        <source src="assets/drilling-action.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <!-- Complete Project Collage Overview -->
+                <div class="bg-slate-800 p-4 rounded-2xl border border-slate-700 shadow-xl">
+                    <h3 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-images text-primary"></i> Turnkey Water Solutions Gallery
+                    </h3>
+                    <img src="assets/collage.jpg" alt="GeoWater Tech Drilling Operations Overview" class="w-full rounded-xl h-[400px] object-cover">
+                </div>
             </div>
         </div>
     </section>
@@ -183,27 +219,24 @@
                 <p class="text-slate-600">We handle every phase of water development from underground exploration to water coming out of your tap.</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service 1 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-compass-drafting"></i>
                     </div>
                     <h3 class="text-xl font-bold text-secondary mb-3">Hydrogeological Surveys</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        Scientific geophysical surveys to pinpoint aquifer locations, water depth, and optimal drilling points before mobilization, avoiding dry holes.
+                        Scientific geophysical surveys to pinpoint aquifer locations, water depth, and optimal drilling points before mobilization.
                     </p>
                 </div>
-                <!-- Service 2 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-bore-hole"></i>
                     </div>
                     <h3 class="text-xl font-bold text-secondary mb-3">Borehole Drilling</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
-                        High-specification rig drilling for shallow and deep water wells with heavy-duty PVC or steel casing installation for maximum structural longevity.
+                        High-specification rig drilling for shallow and deep water wells with heavy-duty PVC or steel casing installation.
                     </p>
                 </div>
-                <!-- Service 3 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-plug-circle-bolt"></i>
@@ -213,7 +246,6 @@
                         Supply and fitting of high-efficiency AC/DC submersible pumps and solar power systems designed for continuous, off-grid water pumping.
                     </p>
                 </div>
-                <!-- Service 4 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-faucet-drip"></i>
@@ -223,7 +255,6 @@
                         Construction of elevated steel/plastic tank stands and water storage tank installation providing gravity-fed pressurized water supply.
                     </p>
                 </div>
-                <!-- Service 5 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-wrench"></i>
@@ -233,7 +264,6 @@
                         Restoration, flushing, yield testing, and repair of low-yield or collapsed existing boreholes to bring them back to full productivity.
                     </p>
                 </div>
-                <!-- Service 6 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
                         <i class="fa-solid fa-flask"></i>
@@ -247,7 +277,7 @@
         </div>
     </section>
 
-    <!-- Our Process Section -->
+    <!-- Step-by-Step Process -->
     <section id="process" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-16">
@@ -263,7 +293,7 @@
                 <div class="text-center">
                     <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">2</div>
                     <h4 class="font-bold text-secondary mb-2">Mobilization</h4>
-                    <p class="text-xs text-slate-500">Transporting state-of-the-art drilling rigs to your site.</p>
+                    <p class="text-xs text-slate-500">Transporting heavy drilling rigs to your site.</p>
                 </div>
                 <div class="text-center">
                     <div class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">3</div>
@@ -284,30 +314,30 @@
         </div>
     </section>
 
-    <!-- Sectors Served with Industrial Background -->
-    <section id="sectors" class="relative bg-cover bg-center text-white py-20" style="background-image: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop');">
+    <!-- Sectors Served -->
+    <section id="sectors" class="py-20 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold mb-4">Sectors We Serve Across Zambia</h2>
                 <p class="text-slate-400">Tailored hydrogeological services built to meet specific capacity needs.</p>
             </div>
             <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <i class="fa-solid fa-house text-primary text-3xl mb-4"></i>
                     <h3 class="font-bold text-lg mb-2">Residential</h3>
-                    <p class="text-slate-300 text-xs">Clean, reliable domestic borehole water systems for households and residential estates.</p>
+                    <p class="text-slate-400 text-xs">Clean, reliable domestic borehole water systems for households and residential estates.</p>
                 </div>
-                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <i class="fa-solid fa-wheat-awn text-primary text-3xl mb-4"></i>
                     <h3 class="font-bold text-lg mb-2">Agricultural</h3>
-                    <p class="text-slate-300 text-xs">High-yield solar boreholes for commercial farming, livestock, and heavy irrigation setups.</p>
+                    <p class="text-slate-400 text-xs">High-yield solar boreholes for commercial farming, livestock, and heavy irrigation setups.</p>
                 </div>
-                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <i class="fa-solid fa-building text-primary text-3xl mb-4"></i>
                     <h3 class="font-bold text-lg mb-2">Commercial</h3>
-                    <p class="text-slate-300 text-xs">Uninterrupted water security for hotels, office complexes, factories, and construction.</p>
+                    <p class="text-slate-400 text-xs">Uninterrupted water security for hotels, office complexes, factories, and construction.</p>
                 </div>
-                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
                     <i class="fa-solid fa-mountain text-primary text-3xl mb-4"></i>
                     <h3 class="font-bold text-lg mb-2">Mining & NGO</h3>
                     <p class="text-slate-400 text-xs">Large-scale water exploration, deep drilling, and community water supply projects.</p>
@@ -334,7 +364,7 @@
                 <ul class="space-y-2 text-sm">
                     <li><a href="#about" class="hover:text-primary">About Us</a></li>
                     <li><a href="#services" class="hover:text-primary">Borehole Drilling & Services</a></li>
-                    <li><a href="#process" class="hover:text-primary">Working Process</a></li>
+                    <li><a href="#projects" class="hover:text-primary">Live Operations</a></li>
                     <li><a href="#quote" class="hover:text-primary">Request Free Estimate</a></li>
                 </ul>
             </div>
