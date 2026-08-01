@@ -30,10 +30,10 @@
         <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-2">
             <div class="flex items-center space-x-6">
                 <span><i class="fa-solid fa-location-dot text-primary mr-2"></i> Lusaka & Countrywide, Zambia</span>
-                <span><i class="fa-solid fa-envelope text-primary mr-2"></i> info@geowatertech.com</span>
+                <span><i class="fa-solid fa-envelope text-primary mr-2"></i> geowatertechlimited@gmail.com</span>
             </div>
             <div class="flex items-center space-x-4">
-                <span><i class="fa-solid fa-phone text-primary mr-2"></i> +260 97 000 0000</span>
+                <span><i class="fa-solid fa-phone text-primary mr-2"></i> +260 97 234 9999 / +260 97 271 9999</span>
                 <a href="#quote" class="text-xs bg-primary hover:bg-sky-700 text-white px-3 py-1 rounded font-semibold transition">Request Quote</a>
             </div>
         </div>
@@ -59,50 +59,52 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative bg-gradient-to-r from-slate-900 to-slate-800 text-white py-24 md:py-32">
+    <!-- Hero Section with Background Image -->
+    <header class="relative bg-cover bg-center text-white py-24 md:py-32" style="background-image: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?q=80&w=1600&auto=format&fit=crop');">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
             <div>
-                <span class="inline-block bg-primary/20 text-sky-400 border border-sky-400/30 font-semibold text-xs uppercase px-3 py-1 rounded-full mb-4">
+                <span class="inline-block bg-primary/20 text-sky-300 border border-sky-400/30 font-semibold text-xs uppercase px-3 py-1 rounded-full mb-4">
                     Zambia's Trusted Water Experts
                 </span>
                 <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
                     Reliable & Sustainable Borehole & Water Solutions
                 </h1>
-                <p class="text-slate-300 text-lg mb-8 leading-relaxed">
-                    GeoWater Tech Limited provides professional borehole drilling, geophysical surveys, solar pump installations, and water treatment systems across Zambia.
+                <p class="text-slate-200 text-lg mb-8 leading-relaxed">
+                    GeoWater Tech Limited provides professional borehole drilling, hydrogeological surveys, solar pump installations, and water treatment systems across Zambia.
                 </p>
                 <div class="flex flex-wrap gap-4">
                     <a href="#quote" class="bg-primary hover:bg-sky-700 text-white font-bold px-7 py-3.5 rounded-lg transition shadow-lg">
                         Get a Free Quote
                     </a>
-                    <a href="#services" class="bg-slate-700 hover:bg-slate-600 text-white font-semibold px-7 py-3.5 rounded-lg transition">
+                    <a href="#services" class="bg-slate-800/80 hover:bg-slate-700 text-white font-semibold px-7 py-3.5 rounded-lg transition border border-slate-600">
                         Explore Services
                     </a>
                 </div>
             </div>
-            <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700 shadow-2xl">
+            <div class="bg-slate-900/85 backdrop-blur p-8 rounded-2xl border border-slate-700 shadow-2xl">
                 <h3 class="text-xl font-bold text-white mb-4">Quick Water Solution Inquiry</h3>
-                <form id="quote" class="space-y-4">
+                <!-- Netlify Form Integration -->
+                <form name="water-inquiry" method="POST" data-netlify="true" id="quote" class="space-y-4">
+                    <input type="hidden" name="form-name" value="water-inquiry" />
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
-                        <input type="text" class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary" placeholder="e.g. Chileshe Mulenga" required>
+                        <input type="text" name="name" class="w-full bg-slate-950 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary" placeholder="e.g. Chileshe Mulenga" required>
                     </div>
                     <div class="grid grid-cols-2 gap-4">
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
-                            <input type="tel" class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary" placeholder="+260 97 ..." required>
+                            <input type="tel" name="phone" class="w-full bg-slate-950 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary" placeholder="+260 97 ..." required>
                         </div>
                         <div>
                             <label class="block text-xs font-semibold text-slate-300 mb-1">Location in Zambia</label>
-                            <input type="text" class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary" placeholder="e.g. Lusaka, Ndola" required>
+                            <input type="text" name="location" class="w-full bg-slate-950 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary" placeholder="e.g. Lusaka, Ndola" required>
                         </div>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-slate-300 mb-1">Service Required</label>
-                        <select class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary">
+                        <select name="service" class="w-full bg-slate-950 border border-slate-700 text-white px-4 py-2.5 rounded-lg focus:outline-none focus:border-primary">
                             <option>New Borehole Drilling</option>
-                            <option>Geophysical Survey</option>
+                            <option>Hydrogeological Survey</option>
                             <option>Pump Installation & Solar Systems</option>
                             <option>Borehole Rehabilitation</option>
                             <option>Water Tank & Tower Installation</option>
@@ -117,12 +119,12 @@
         </div>
     </header>
 
-    <!-- Stats Bar -->
-    <section class="bg-primary text-white py-10">
+    <!-- Stats Bar with Water Pattern Background -->
+    <section class="relative bg-cover bg-center text-white py-12" style="background-image: linear-gradient(rgba(2, 132, 199, 0.9), rgba(3, 105, 161, 0.9)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop');">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
                 <p class="text-3xl md:text-4xl font-extrabold mb-1">30+</p>
-                <p class="text-sm text-sky-100">Years Industry Experience</p>
+                <p class="text-sm text-sky-100">Years Regional Experience</p>
             </div>
             <div>
                 <p class="text-3xl md:text-4xl font-extrabold mb-1">100%</p>
@@ -130,7 +132,7 @@
             </div>
             <div>
                 <p class="text-3xl md:text-4xl font-extrabold mb-1">Solar & AC</p>
-                <p class="text-sm text-sky-100">Pump Systems</p>
+                <p class="text-sm text-sky-100">Submersible Systems</p>
             </div>
             <div>
                 <p class="text-3xl md:text-4xl font-extrabold mb-1">Zambia</p>
@@ -145,10 +147,10 @@
             <div>
                 <h2 class="text-3xl font-bold text-secondary mb-6">About GeoWater Tech Limited</h2>
                 <p class="text-slate-600 mb-4 leading-relaxed">
-                    GeoWater Tech Limited is a premier water development and borehole drilling contractor operating across Zambia. Leveraging over 30 years of regional expertise in subterranean geology and hydrological engineering, we deliver precise, high-capacity water systems.
+                    GeoWater Tech Limited is a premier water development and borehole drilling contractor operating across Zambia. Leveraging extensive expertise in subterranean geology and hydrological engineering, we deliver precise, high-capacity water systems.
                 </p>
                 <p class="text-slate-600 mb-6 leading-relaxed">
-                    From single domestic boreholes to heavy-duty industrial and agricultural irrigation networks, we utilize state-of-the-art drilling rigs and precision hydrogeological surveying technology to guarantee sustainable water delivery.
+                    From single domestic boreholes to heavy-duty industrial, mining, and agricultural irrigation networks, we utilize state-of-the-art drilling rigs and precision hydrogeological surveying technology to guarantee sustainable water delivery.
                 </p>
                 <div class="grid grid-cols-2 gap-4 border-t pt-6">
                     <div class="flex items-start gap-3">
@@ -167,22 +169,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bg-slate-100 p-8 rounded-2xl border border-slate-200">
-                <h3 class="text-xl font-bold text-secondary mb-4">Our Core Values</h3>
-                <ul class="space-y-4">
-                    <li class="p-4 bg-white rounded-lg shadow-sm border">
-                        <h4 class="font-bold text-primary mb-1">Integrity & Ethical Standards</h4>
-                        <p class="text-sm text-slate-600">Building long-term client trust through transparent pricing and accurate geological assessments.</p>
-                    </li>
-                    <li class="p-4 bg-white rounded-lg shadow-sm border">
-                        <h4 class="font-bold text-primary mb-1">Precision & Safety</h4>
-                        <p class="text-sm text-slate-600">Strict adherence to safety guidelines, borehole casing standards, and environmental protection.</p>
-                    </li>
-                    <li class="p-4 bg-white rounded-lg shadow-sm border">
-                        <h4 class="font-bold text-primary mb-1">Customer-Centric Focus</h4>
-                        <p class="text-sm text-slate-600">Customized water solutions built specifically for your site conditions and yield requirements.</p>
-                    </li>
-                </ul>
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=800&auto=format&fit=crop" alt="Water Engineering" class="rounded-2xl shadow-xl object-cover w-full h-[400px]">
             </div>
         </div>
     </section>
@@ -198,7 +186,7 @@
                 <!-- Service 1 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-[#0284c7] fa-compass-drafting"></i>
+                        <i class="fa-solid fa-compass-drafting"></i>
                     </div>
                     <h3 class="text-xl font-bold text-secondary mb-3">Hydrogeological Surveys</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -208,7 +196,7 @@
                 <!-- Service 2 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-bore-hole text-primary"></i>
+                        <i class="fa-solid fa-bore-hole"></i>
                     </div>
                     <h3 class="text-xl font-bold text-secondary mb-3">Borehole Drilling</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -218,7 +206,7 @@
                 <!-- Service 3 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-plug-circle-bolt text-primary"></i>
+                        <i class="fa-solid fa-plug-circle-bolt"></i>
                     </div>
                     <h3 class="text-xl font-bold text-secondary mb-3">Pump & Solar Installations</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -228,7 +216,7 @@
                 <!-- Service 4 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-faucet-drip text-primary"></i>
+                        <i class="fa-solid fa-faucet-drip"></i>
                     </div>
                     <h3 class="text-xl font-bold text-secondary mb-3">Water Storage & Towers</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -238,7 +226,7 @@
                 <!-- Service 5 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-wrench text-primary"></i>
+                        <i class="fa-solid fa-wrench"></i>
                     </div>
                     <h3 class="text-xl font-bold text-secondary mb-3">Borehole Rehabilitation</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -248,7 +236,7 @@
                 <!-- Service 6 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-slate-100">
                     <div class="w-12 h-12 bg-sky-100 text-primary rounded-lg flex items-center justify-center text-xl mb-6">
-                        <i class="fa-solid fa-flask text-primary"></i>
+                        <i class="fa-solid fa-flask"></i>
                     </div>
                     <h3 class="text-xl font-bold text-secondary mb-3">Water Quality Testing</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">
@@ -296,30 +284,30 @@
         </div>
     </section>
 
-    <!-- Sectors Served -->
-    <section id="sectors" class="py-20 bg-slate-900 text-white">
+    <!-- Sectors Served with Industrial Background -->
+    <section id="sectors" class="relative bg-cover bg-center text-white py-20" style="background-image: linear-gradient(to right, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1600&auto=format&fit=crop');">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold mb-4">Sectors We Serve Across Zambia</h2>
                 <p class="text-slate-400">Tailored hydrogeological services built to meet specific capacity needs.</p>
             </div>
             <div class="grid md:grid-cols-4 gap-6">
-                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
                     <i class="fa-solid fa-house text-primary text-3xl mb-4"></i>
                     <h3 class="font-bold text-lg mb-2">Residential</h3>
-                    <p class="text-slate-400 text-xs">Clean, reliable domestic borehole water systems for households and residential estates.</p>
+                    <p class="text-slate-300 text-xs">Clean, reliable domestic borehole water systems for households and residential estates.</p>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
                     <i class="fa-solid fa-wheat-awn text-primary text-3xl mb-4"></i>
                     <h3 class="font-bold text-lg mb-2">Agricultural</h3>
-                    <p class="text-slate-400 text-xs">High-yield solar boreholes for commercial farming, livestock, and heavy irrigation setups.</p>
+                    <p class="text-slate-300 text-xs">High-yield solar boreholes for commercial farming, livestock, and heavy irrigation setups.</p>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
                     <i class="fa-solid fa-building text-primary text-3xl mb-4"></i>
                     <h3 class="font-bold text-lg mb-2">Commercial</h3>
-                    <p class="text-slate-400 text-xs">Uninterrupted water security for hotels, office complexes, factories, and construction.</p>
+                    <p class="text-slate-300 text-xs">Uninterrupted water security for hotels, office complexes, factories, and construction.</p>
                 </div>
-                <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+                <div class="bg-slate-800/80 backdrop-blur p-6 rounded-xl border border-slate-700">
                     <i class="fa-solid fa-mountain text-primary text-3xl mb-4"></i>
                     <h3 class="font-bold text-lg mb-2">Mining & NGO</h3>
                     <p class="text-slate-400 text-xs">Large-scale water exploration, deep drilling, and community water supply projects.</p>
@@ -353,9 +341,9 @@
             <div>
                 <h4 class="text-white font-bold mb-4">Contact GeoWater Tech Zambia</h4>
                 <ul class="space-y-3 text-sm">
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-primary"></i> Lusaka, Zambia</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-primary"></i> +260 97 000 0000</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-primary"></i> info@geowatertech.com</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-primary"></i> Lusaka & Countrywide, Zambia</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-primary"></i> +260 97 234 9999 / +260 97 271 9999</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-primary"></i> geowatertechlimited@gmail.com</li>
                     <li class="flex items-center gap-3"><i class="fa-solid fa-globe text-primary"></i> www.geowatertech.com</li>
                 </ul>
             </div>
